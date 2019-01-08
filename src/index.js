@@ -1,26 +1,19 @@
-/**
- * @class ExampleComponent
- */
+import Map from './components/Map'
+import Marker from './components/Marker'
+import PolyEditor from './components/PolyEditor'
+import Polyline from './components/Polyline'
+import Polygon from './components/Polygon'
+import Rectangle from './components/Rectangle'
+import Circle from './components/Circle'
+import InfoWindow from './components/InfoWinodw'
 
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-
-import styles from './styles.css'
-
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
-  }
-
-  render() {
-    const {
-      text
-    } = this.props
-
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
+export {
+  Map,
+  Marker,
+  PolyEditor,
+  Polyline,
+  Polygon,
+  Rectangle,
+  Circle,
+  InfoWindow
 }

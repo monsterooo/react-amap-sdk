@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
-
-import ExampleComponent from 'react-amap-sdk'
+import MarkerDemo from './demo/MarkerDemo';
+import InfoWindowDemo from './demo/InfoWindowDemo';
+import RectangleDemo from './demo/RectangleDemo';
 
 export default class App extends Component {
   render () {
     return (
       <div>
-        <ExampleComponent text='Modern React component module' />
+        {/* <MarkerDemo /> */}
+        {/* <InfoWindowDemo /> */}
+        <RectangleDemo />
       </div>
     )
   }
