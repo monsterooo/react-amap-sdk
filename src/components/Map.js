@@ -34,24 +34,28 @@ const EVENT = {
 
 class Map extends React.Component {
   constructor(props) {
-    super(props);
-    this.mapRef = React.createRef();
-    this.mapInstance = null;
+    super(props)
+    this.mapRef = React.createRef()
+    this.mapInstance = null
     this.omitAttr = [
-      "mapKey",
-      "plugin",
-      "version",
-      "apiUrl",
-      "options",
-      "scriptLoad",
-      "children",
-      "width",
-      "height",
-      "onCreate",
-      "customeLoad",
+      'mapKey',
+      'plugin',
+      'version',
+      'apiUrl',
+      'children',
+      'width',
+      'height',
+      'onCreate',
+      'onDestroy',
+      'customeLoad',
       ...Object.keys(EVENT)
-    ];
+    ]
     this.map_attr = Object.keys(COMPONENT_ATTR)
+  }
+  componentWillUnmount() {
+    const { onDestroy } = this.props
+
+    onDestroy && onDestroy(this.mapInstance)
   }
   handleLoaded = () => {
     const { onCreate } = this.props;
@@ -62,8 +66,9 @@ class Map extends React.Component {
     onCreate && onCreate(this.mapInstance);
   }
   preProgressChildren(children) {
-    if (!children) return null;
+    if (!children) return null
     return React.Children.map(children, child => {
+      if (!child) return null
       return React.cloneElement(child, { _map_: this.mapInstance });
     });
   }

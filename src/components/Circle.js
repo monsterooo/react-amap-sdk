@@ -38,6 +38,12 @@ class Circle extends React.Component {
     }
     this.updateOptions(prevProps);
   }
+  componentWillUnmount() {
+    const { onDestroy, _map_ } = this.props
+
+    onDestroy && onDestroy(this.circleInstance)
+    _map_.remove([this.circleInstance])
+  }
   updateOptions(prevProps) {
     const listenOptions = [
       'zIndex',

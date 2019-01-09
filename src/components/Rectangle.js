@@ -34,7 +34,7 @@ class Rectangle extends React.Component {
   }
   componentDidUpdate(prevProps) {
     const { bounds, extData, visible } = this.props;
-    
+
     if (prevProps.bounds !== bounds) {
       this.rectangleInstance.setBounds(this.createBounds());
     }
@@ -44,6 +44,12 @@ class Rectangle extends React.Component {
     if (prevProps.visible !== visible) {
       visible ? this.rectangleInstance.show() : this.rectangleInstance.hide();
     }
+  }
+  componentWillUnmount() {
+    const { onDestroy, _map_ } = this.props
+
+    onDestroy && onDestroy(this.rectangleInstance)
+    _map_.remove([this.rectangleInstance])
   }
   updateOptions(prevProps) {
     const listenOptions = [

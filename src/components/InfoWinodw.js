@@ -43,6 +43,12 @@ class InfoWindow extends React.Component {
     }
     this.renderContent();
   }
+  componentWillUnmount() {
+    const { onDestroy, _map_ } = this.props
+
+    onDestroy && onDestroy(this.InfoWindowInstance)
+    _map_.remove([this.InfoWindowInstance])
+  }
   renderContent() {
     const { children } = this.props;
 

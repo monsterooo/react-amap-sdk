@@ -86,9 +86,10 @@ class Marker extends React.Component {
     this.renderContent();
   }
   componentWillUnmount() {
-    const { onDestroy } = this.props;
+    const { onDestroy, _map_ } = this.props
 
-    onDestroy && onDestroy(this.markerInstance);
+    onDestroy && onDestroy(this.markerInstance)
+    _map_.remove([this.markerInstance])
   }
   renderContent() {
     const { children } = this.props;

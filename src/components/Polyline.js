@@ -44,9 +44,10 @@ class Polyline extends React.Component {
     this.updateOptions(prevProps)
   }
   componentWillUnmount() {
-    const { onDestroy } = this.props;
+    const { onDestroy, _map_ } = this.props
 
-    onDestroy && onDestroy(this.polylineInstance);
+    onDestroy && onDestroy(this.polylineInstance)
+    _map_.remove([this.polylineInstance])
   }
   updateOptions(prevProps) {
     const listenOptions = [

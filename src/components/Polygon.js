@@ -44,6 +44,12 @@ class Polygon extends React.Component {
     }
     this.updateOptions();
   }
+  componentWillUnmount() {
+    const { onDestroy, _map_ } = this.props
+
+    onDestroy && onDestroy(this.polygonInstance)
+    _map_.remove([this.polygonInstance])
+  }
   updateOptions(prevProps) {
     const listenOptions = [
       'zIndex',
