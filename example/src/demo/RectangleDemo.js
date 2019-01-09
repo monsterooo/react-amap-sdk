@@ -48,12 +48,10 @@ class RectangleDemo extends React.Component {
         <Map
           mapKey=""
           version="1.4.8"
-          plugin={this.plugin}
           width={300}
           height={300}
           zoom={zoom}
           center={center}
-          onClick={this.handleMapClick}
         >
           <Rectangle bounds={bounds}  onCreate={(e) => {
             console.log('rectangle 1创建 > ', e);

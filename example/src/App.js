@@ -7,9 +7,9 @@ export default class App extends Component {
   render () {
     return (
       <div>
-        {/* <MarkerDemo /> */}
+        <MarkerDemo />
         {/* <InfoWindowDemo /> */}
-        <RectangleDemo />
+        {/* <RectangleDemo /> */}
       </div>
     )
   }

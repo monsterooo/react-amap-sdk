@@ -98,7 +98,6 @@ class MarkerDemo extends React.Component {
           scriptLoad
           mapKey=''
           version='1.4.8'
-          plugin={this.plugin}
           width={300}
           height={300}
           doubleClickZoom={false}
