@@ -12,7 +12,8 @@ class InfoWindowDemo extends React.Component {
       size: [50, 50],
       offset: [0, 0],
       center: [116.397992, 39.904478],
-      zoom: 12
+      zoom: 12,
+      blockShow: false
     };
     this.plugin = ["AMap.MouseTool", "AMap.PolyEditor"];
   }
@@ -54,7 +55,7 @@ class InfoWindowDemo extends React.Component {
     })
   }
   render() {
-    const { visible, position, size, offset, zoom, center } = this.state;
+    const { visible, position, size, offset, zoom, center, blockShow } = this.state;
 
     return (
       <div className="marker_demo">
@@ -74,6 +75,9 @@ class InfoWindowDemo extends React.Component {
           <button onClick={this.changeState("offset", [20, 0])}>
             改变窗体 Offset
           </button>
+          <button onClick={this.changeState("blockShow", true)}>
+            销毁 InfoWindow
+          </button>
         </div>
         <Map
           mapKey=""
@@ -86,9 +90,13 @@ class InfoWindowDemo extends React.Component {
           onClick={this.handleMapClick}
           onCreate={this.handleMapCreate}
         >
-          <InfoWindow offset={offset} onCreate={this.handleCreate} visible={visible} position={position} size={size}>
-            <div>abc</div>
-          </InfoWindow>
+          {
+            !blockShow ? <InfoWindow offset={offset} onCreate={this.handleCreate} visible={visible} position={position} size={size} onDestroy={(e) => {
+              console.log('销毁InfoWindow > ', e)
+            }}>
+              <div>abc</div>
+            </InfoWindow> : null
+          }
         </Map>
       </div>
     );

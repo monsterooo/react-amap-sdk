@@ -18,7 +18,8 @@ class MarkerDemo extends React.Component {
       angle: 0,
       clickable: true,
       center: [104.068968, 30.537758],
-      zoom: 19
+      zoom: 19,
+      blockShow: false,
     }
     this.plugin = ['AMap.MouseTool', 'AMap.PolyEditor']
     this.extData = {
@@ -64,6 +65,9 @@ class MarkerDemo extends React.Component {
   handleChangeClickable = () => {
     this.setState({ clickable: false })
   };
+  changeState = (key, val) => () => {
+    this.setState({ [key]: val });
+  };
   render() {
     const {
       icon,
@@ -76,7 +80,8 @@ class MarkerDemo extends React.Component {
       angle,
       clickable,
       zoom,
-      center
+      center,
+      blockShow
     } = this.state
     return (
       <div className='marker_demo'>
@@ -93,9 +98,11 @@ class MarkerDemo extends React.Component {
           <button onClick={this.handleChangeClickable}>
             改变Marker Clickable
           </button>
+          <button onClick={this.changeState('blockShow', true)}>
+            销毁Marker
+          </button>
         </div>
         <Map
-          scriptLoad
           mapKey=''
           version='1.4.8'
           width={300}
@@ -127,19 +134,24 @@ class MarkerDemo extends React.Component {
               }}
             />
           </Marker>
-          <Marker
-            icon={icon}
-            position={markerPosition2}
-            offset={markerOffset2}
-            angle={angle}
-            title='我是鼠标滑过的提示文字'
-            onClick={e => {
-              console.log('我被点击了', e.target.getExtData())
-            }}
-            draggable={true}
-            clickable={clickable}
-            extData={this.extData}
-          />
+          {
+            !blockShow ? <Marker
+              icon={icon}
+              position={markerPosition2}
+              offset={markerOffset2}
+              angle={angle}
+              title='我是鼠标滑过的提示文字'
+              onClick={e => {
+                console.log('我被点击了', e.target.getExtData())
+              }}
+              draggable={true}
+              clickable={clickable}
+              extData={this.extData}
+              onDestroy={(e) => {
+                console.log('onDestroy > ', e);
+              }}
+            /> : null
+          }
         </Map>
       </div>
     )
