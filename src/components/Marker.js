@@ -14,7 +14,7 @@ const EVENT = {
   onRightClick: "rightclick",
   onMouseMove: "mousemove",
   onMouseOver: "mouseover",
-  onMouseout: "mouseout",
+  onMouseOut: "mouseout",
   onMouseDown: "mousedown",
   onMouseUp: "mouseup",
   onDragStart: "dragstart",

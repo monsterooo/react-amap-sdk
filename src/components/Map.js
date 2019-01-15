@@ -9,9 +9,9 @@ const EVENT = {
   onDblClick: "dblclick",
   onMapMove: "mapmove",
   onHotSpotClick: "hotspotclick", // v1.3
-  onHotSpotover: "hotspotover", // v1.3
-  onHotSpotout: "hotspotout", // v1.3
-  onMovestart: "movestart",
+  onHotSpotOver: "hotspotover", // v1.3
+  onHotSpotOut: "hotspotout", // v1.3
+  onMoveStart: "movestart",
   onMoveEnd: "moveend",
   onZoomChange: "zoomchange",
   onZoomStart: "zoomstart",
