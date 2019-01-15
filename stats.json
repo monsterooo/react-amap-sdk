@@ -1,0 +1,66 @@
+{
+  "assetsByChunkName": {
+    "component---src-pages-index-js": [
+      "component---src-pages-index-js-02d027f995ba79bed161.js",
+      "component---src-pages-index-js-02d027f995ba79bed161.js.map"
+    ],
+    "path---templates": [
+      "path---templates-a0e39f21c11f6a62c5ab.js",
+      "path---templates-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---": [
+      "path----557518bd178906f8d58a.js",
+      "path----557518bd178906f8d58a.js.map"
+    ],
+    "component---src-pages-templates-js": [
+      "component---src-pages-templates-js-73a932851785a030e1a4.js",
+      "component---src-pages-templates-js-73a932851785a030e1a4.js.map"
+    ],
+    "component---src-layouts-index-js": [
+      "component---src-layouts-index-js-20dac4d5f3df4fe0adcf.js",
+      "component---src-layouts-index-js-20dac4d5f3df4fe0adcf.js.map"
+    ],
+    "path---docs": [
+      "path---docs-a0e39f21c11f6a62c5ab.js",
+      "path---docs-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---index": [
+      "path---index-a0e39f21c11f6a62c5ab.js",
+      "path---index-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-faqs-js": [
+      "component---src-pages-faqs-js-7114afe27bb1e7646732.js",
+      "component---src-pages-faqs-js-7114afe27bb1e7646732.js.map"
+    ],
+    "component---src-pages-404-js": [
+      "component---src-pages-404-js-47bf3d5c9fc056d6f914.js",
+      "component---src-pages-404-js-47bf3d5c9fc056d6f914.js.map"
+    ],
+    "commons": [
+      "commons-19d79a17a09d63cc1b27.js",
+      "commons-19d79a17a09d63cc1b27.js.map"
+    ],
+    "path---404-html": [
+      "path---404-html-a0e39f21c11f6a62c5ab.js",
+      "path---404-html-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-docs-js": [
+      "component---src-pages-docs-js-6fba173b2cd86bc9a042.js",
+      "component---src-pages-docs-js-6fba173b2cd86bc9a042.js.map"
+    ],
+    "app": [
+      "app-bf67fd1a45f1f9418959.js",
+      "build-js-styles.css",
+      "app-bf67fd1a45f1f9418959.js.map",
+      "build-js-styles.css.map"
+    ],
+    "path---404": [
+      "path---404-a0e39f21c11f6a62c5ab.js",
+      "path---404-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---faqs": [
+      "path---faqs-a0e39f21c11f6a62c5ab.js",
+      "path---faqs-a0e39f21c11f6a62c5ab.js.map"
+    ]
+  }
+}
