@@ -123,14 +123,14 @@ class MarkerDemo extends React.Component {
               style={{
                 width: 30,
                 height: 30,
-                background: 'rgba(56,56,56,0.5'
+                background: 'rgba(56,56,56,0.5)'
               }}
             />
             <div
               style={{
                 width: 60,
                 height: 60,
-                background: 'rgba(56,56,56,0.5'
+                background: 'rgba(56,56,56,0.5)'
               }}
             />
           </Marker>

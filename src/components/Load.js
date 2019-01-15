@@ -24,10 +24,10 @@ class Load extends React.Component {
     }
   }
   loadScript(props) {
-    const { customeLoad, onLoaded } = this.props // 自定义script加载
+    const { customLoad, onLoaded } = this.props // 自定义script加载
     const findOldScript = document.querySelector(`.${this.className}`)
 
-    if (customeLoad) {
+    if (customLoad) {
       if (this.timer) clearInterval(this.timer)
       this.timer = setInterval(() => {
         if (window.AMap) {

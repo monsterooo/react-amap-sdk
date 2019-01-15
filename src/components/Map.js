@@ -47,7 +47,7 @@ class Map extends React.Component {
       'height',
       'onCreate',
       'onDestroy',
-      'customeLoad',
+      'customLoad',
       ...Object.keys(EVENT)
     ]
     this.map_attr = Object.keys(COMPONENT_ATTR)
